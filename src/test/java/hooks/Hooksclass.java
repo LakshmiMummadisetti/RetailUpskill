@@ -11,16 +11,15 @@ public class Hooksclass {
 	public static String url = "http://retailm1.upskills.in/admin/";
 	public static String username = "admin";
 	public static String password = "Admin@123";
-	
+
 	@Before
-	public void init()
-	{
+	public void init() {
 		System.setProperty("webdriver.chrome.driver", ".\\lib\\chromedriver.exe");
 		driver = new ChromeDriver();
 	}
+
 	@After
-	public void close()
-	{
+	public void close() {
 		driver.quit();
 	}
 

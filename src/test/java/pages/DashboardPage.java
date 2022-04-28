@@ -12,28 +12,24 @@ import io.cucumber.java.en.Then;
 
 public class DashboardPage {
 	WebDriver driver = Hooksclass.driver;
-	 @FindBy(linkText = "Home") WebElement home ;
-	 @FindBy(xpath = "//li[@id='menu-marketing']") public static WebElement  marketingMenu;
-	 @FindBy(linkText = "Coupons") WebElement clickOnCoupons ;
-	 
-	 public DashboardPage()
-	 {
-		 PageFactory.initElements(driver,this);
-	 }
-	 
-	
+	@FindBy(linkText = "Home")
+	WebElement home;
+	@FindBy(xpath = "//li[@id='menu-marketing']")
+	public static WebElement marketingMenu;
+	@FindBy(linkText = "Coupons")
+	WebElement clickOnCoupons;
+
+	public DashboardPage() {
+		PageFactory.initElements(driver, this);
+	}
 	public void retail_login_page_should_load() {
-	  // driver.findElement(By.linkText("Home")).isDisplayed();
 		home.isDisplayed();
-	  
 	}
 	@Given("Click on Coupons")
 	public void click_on_coupons() {
-	   // driver.findElement(By.xpath("//li[@id='menu-marketing']")).click();
-	   // driver.findElement(By.linkText("Coupons")).click();
 		marketingMenu.click();
 		clickOnCoupons.click();
-	    
+
 	}
-	
+
 }
