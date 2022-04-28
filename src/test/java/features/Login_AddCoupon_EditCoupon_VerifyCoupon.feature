@@ -2,8 +2,7 @@ Feature: Reatil Upskill
 
 Scenario: Add Edit and Delete Coupon
 
-Given User Navigated to Login Page
-Then User Enter Login and password And click on Enter
+Given User Navigated to Login Page and login with user id and password
 And Retail Login Page should load
 Given Click on Coupons 
 Then Click on Add Coupon
